@@ -298,19 +298,21 @@ h3 {
     transform: none;
   }
 }
-/* Grid cards reveal as they enter the viewport — JS adds .in-view */
+/* Elements reveal as they enter the viewport — JS adds .in-view.
+   Without JS (no .js on <html>) everything is simply visible. */
 .reveal--scroll {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+.js .reveal--scroll {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: reveal var(--dur-long) var(--ease-out) forwards;
   animation-play-state: paused;
 }
-.reveal--scroll.in-view {
+.js .reveal--scroll.in-view {
   animation-play-state: running;
-}
-@supports not (animation-play-state: paused) {
-  .reveal--scroll {
-    opacity: 1;
-    transform: none;
-    animation: none;
-  }
 }
 
 /* ── Character mark: one pear dot that breathes ────────────── */

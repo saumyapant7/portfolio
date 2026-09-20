@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "./sections.css";
 
 // Garden's type, self-hosted (OFL). Display serif, humanist body, mono labels.
 const display = localFont({
@@ -28,15 +29,16 @@ const mono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Saumya Pant",
-  description: "Portfolio of Saumya Pant.",
+  title: "Saumya Pant — performance marketing and AI for marketing teams",
+  description:
+    "Saumya Pant plans, runs and automates Google, Meta and YouTube campaigns, builds GA4 measurement, and puts AI agents to work for marketing teams. Nine years across Oracle, Reckitt, Udaan and Google.",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body>{children}</body>
     </html>
   );
