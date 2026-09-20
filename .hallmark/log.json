@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2026-09-20",
+    "page": "home",
+    "route": "custom-tuned",
+    "theme": "Hum × Garden",
+    "axes": { "paper": "light-cream", "display": "classical-serif (Young Serif)", "accent": "multi (pear/cyan/coral)" },
+    "macrostructure": "18 Portfolio Grid (off-centre text-left/art-right hero)",
+    "nav": "N9 edge-aligned minimal",
+    "footer": "Ft6 letter close"
+  }
+]
