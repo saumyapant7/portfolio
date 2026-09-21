@@ -33,7 +33,7 @@ export default function Home() {
               <a className="btn" href="#contact">
                 Book a free 30-minute audit <span className="btn__arrow">→</span>
               </a>
-              <a className="btn btn--outline" href={profile.links.resume} target="_blank" rel="noopener">
+              <a className="btn btn--outline" href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${profile.links.resume}`} target="_blank" rel="noopener">
                 Résumé (PDF)
               </a>
             </div>
@@ -48,7 +48,7 @@ export default function Home() {
           <figure className="hero__figure reveal" style={i(2)}>
             <div className="hero__photo">
               <Image
-                src="/saumya.jpg"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/saumya.jpg`}
                 alt="Saumya Pant, smiling, one hand resting on a carved sandstone pillar"
                 width={740}
                 height={809}
